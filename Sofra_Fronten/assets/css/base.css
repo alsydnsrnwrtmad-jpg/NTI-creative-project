@@ -1,0 +1,95 @@
+/* =====================================================================
+   SOFRA — BASE / RESET
+   يتحمّل في كل صفحة قبل أي CSS تاني (بعد variables.css مباشرة)
+   ===================================================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+     scrollbar-width: none; /* Firefox */
+}
+html::-webkit-scrollbar {
+    display: none; /* Chrome, Edge, Safari */
+}
+body {
+    margin: 0;
+    background-color: var(--bg-page);
+    color: var(--text-primary);
+    font-family: "Poppins", "Segoe UI", Arial, "Helvetica Neue", Helvetica, sans-serif;
+    transition: var(--transition-theme);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3 {
+    font-family: "Poppins", "Segoe UI", Arial, sans-serif;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* يوقف كل الأنيميشن لو المستخدم مفعّل "تقليل الحركة" في نظامه */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* مساحة تحت الـ navbar الثابت (fixed) عشان محتوى الصفحة ميتغطاش */
+.page-content {
+    padding-top: 96px;
+}
+
+/* صفحات بدون navbar/footer (اختيار الحساب + تسجيل الدخول) ملهاش لازمة للمساحة دي */
+body[data-page="choice"] .page-content,
+body[data-page="login"] .page-content {
+    padding-top: 0;
+    min-height: 100vh;
+}
+
+/* focus واضح لكل العناصر القابلة للتفاعل - accessibility */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+[tabindex]:focus-visible {
+    outline: 3px solid var(--brand-gold);
+    outline-offset: 2px;
+}
+
+::selection {
+    background: var(--brand-gold);
+    color: #1a1200;
+}
+
+/* Skip-link لتخطي الـ navbar بلوحة المفاتيح */
+.skip-link {
+    position: absolute;
+    top: -60px;
+    left: 10px;
+    background: var(--brand-red);
+    color: #fff;
+    padding: 10px 16px;
+    border-radius: 8px;
+    z-index: 2000;
+    transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+    top: 10px;
+}

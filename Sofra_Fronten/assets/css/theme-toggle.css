@@ -1,0 +1,396 @@
+/* =====================================================================
+   SOFRA — THEME TOGGLE (صباحي / ليلي / أوتوماتيك)
+   ===================================================================== */
+
+.theme-switch {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 999px;
+    padding: 4px;
+    box-shadow: var(--shadow-soft);
+    transition: var(--transition-theme);
+}
+
+.theme-switch button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 999px;
+    border: none;
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+}
+
+.theme-switch button svg {
+    width: 17px;
+    height: 17px;
+    pointer-events: none;
+}
+
+.theme-switch button:hover {
+    color: var(--text-primary);
+    transform: translateY(-1px);
+}
+
+.theme-switch button.active {
+    background: var(--gradient-card);
+    color: #fff;
+    box-shadow: 0 0 8px var(--brand-red);
+}
+
+.theme-switch button.active svg {
+    filter: drop-shadow(0 0 2px rgba(255, 255, 255, 0.6));
+}
+
+@media (max-width: 991px) {
+    .theme-switch {
+        margin: 12px 0;
+    }
+}
+/* ------------------------- */
+/* =========================
+   MENU SECTION
+========================= */
+
+.menu-section {
+    padding: 50px 35px;
+}
+
+.menu-section .row {
+    align-items: stretch;
+}
+
+
+/* =========================
+   MENU CARD
+========================= */
+
+.menu-card {
+    height: 100%;
+    min-height: 480px;
+
+    background: #181412;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 22px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* Hover */
+
+.menu-card:hover {
+    transform: translateY(-8px);
+
+    border-color: rgba(255, 150, 0, 0.45);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.menu-image {
+    width: 100%;
+    height: 235px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #211d1a;
+}
+
+
+.menu-image::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    height: 80px;
+
+    background: linear-gradient(
+        to top,
+        rgba(24, 20, 18, 0.65),
+        transparent
+    );
+
+    pointer-events: none;
+}
+
+
+.menu-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    transition: transform 0.5s ease;
+}
+
+
+.menu-card:hover .menu-image img {
+    transform: scale(1.07);
+}
+
+
+/* =========================
+   BADGES
+========================= */
+
+.menu-badge {
+    position: absolute;
+
+    top: 16px;
+    left: 0;
+
+    z-index: 2;
+
+    padding: 8px 16px;
+
+    background: linear-gradient(
+        135deg,
+        #ff3b30,
+        #ff170d
+    );
+
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 0.2px;
+
+    border-radius: 0 18px 18px 0;
+
+    box-shadow:
+        0 5px 15px rgba(255, 40, 20, 0.25);
+}
+
+
+.menu-badge.hot {
+    left: 16px;
+
+    border-radius: 18px;
+
+    background: linear-gradient(
+        135deg,
+        #ff8a00,
+        #ff3d00
+    );
+}
+
+
+/* =========================
+   CARD BODY
+========================= */
+
+.menu-card-body {
+    flex: 1;
+
+    padding: 22px 22px 20px;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.menu-card-body h3 {
+    margin: 0 0 10px;
+
+    color: #ffffff;
+
+    font-size: 21px;
+    font-weight: 700;
+
+    line-height: 1.3;
+}
+
+
+.menu-card-body p {
+    margin: 0;
+
+    color: #b9aaa2;
+
+    font-size: 14px;
+
+    line-height: 1.65;
+
+    min-height: 47px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.menu-card-footer {
+    margin-top: auto;
+    padding-top: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+
+/* =========================
+   PRICE
+========================= */
+
+.price {
+    color: #ff3b30;
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================
+   ADD BUTTON
+========================= */
+
+.add-btn {
+    border: none;
+
+    min-width: 105px;
+    height: 42px;
+
+    padding: 0 18px;
+
+    border-radius: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #ffca28 0%,
+        #ff9800 45%,
+        #ff3d00 100%
+    );
+
+    color: #ffffff;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    box-shadow:
+        0 6px 18px rgba(255, 100, 0, 0.25);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        filter 0.2s ease;
+}
+
+
+.add-btn:hover {
+    transform: translateY(-2px);
+
+    filter: brightness(1.08);
+
+    box-shadow:
+        0 9px 24px rgba(255, 100, 0, 0.35);
+}
+
+
+.add-btn:active {
+    transform: scale(0.96);
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1199px) {
+
+    .menu-image {
+        height: 220px;
+    }
+
+    .menu-card {
+        min-height: 460px;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .menu-section {
+        padding: 30px 18px;
+    }
+
+    .menu-image {
+        height: 230px;
+    }
+
+    .menu-card {
+        min-height: 450px;
+    }
+}
+
+
+@media (max-width: 575px) {
+
+    .menu-image {
+        height: 240px;
+    }
+
+    .menu-card-body {
+        padding: 20px;
+    }
+
+    .menu-card-body h3 {
+        font-size: 20px;
+    }
+
+    .add-btn {
+        min-width: 100px;
+    }
+}

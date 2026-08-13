@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra | Login &amp; Register</title>
+
+    <!-- لازم يتحمّل قبل أي حاجة تانية عشان يمنع وميض الألوان -->
+<script>
+    // يتم التنفيذ فوراً قبل تحميل أي عنصر في الصفحة لمنع الثغرة
+    (function() {
+        const selectedType = sessionStorage.getItem('selectedUserType');
+        
+        // لو مفيش نوع متخزن أو القيمة غير صحيحة
+        if (!selectedType || (selectedType !== 'user' && selectedType !== 'admin')) {
+            window.location.replace('choice.html'); // استخدام replace عشان ميرجعش للورا
+            throw new Error('Unauthorized access'); // إيقاف تنفيذ أي كود تاني في الصفحة
+        }
+    })();
+</script>
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <!-- الترتيب مهم: variables -> base -> باقي ملفات الصفحة -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="../assets/css/login_register.css">
+            <script src="../assets/js/user-auth-guard.js"></script>
+
+</head>
+
+<body data-page="login">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+    <main id="main-content" class="page-content">
+        <div id="form-errors-wrapper"></div>
+        <section class="main_section">
+
+            <section id="main_container_login_register">
+                <div class="card_slide_login_register" id="card_slide_login_register"></div>
+
+                <div class="register_container">
+                    <form class="register_form" action="#">
+                        <h1><img src="../assets/images/pizza_steef.png" alt=""> <ins><strong>Sign Up</strong></ins></h1>
+
+                        <input type="hidden" name="register_user_type" id="register_user_type" value="">
+                        <span class="account-type-badge" id="register_type_badge"></span>
+                        <div class="register_Names_section">
+                            <input type="text" placeholder="First Name*" id="first" required>
+                            <input type="text" placeholder="Last Name*" id="last" required>
+                        </div>
+                        <input type="email" placeholder="Email*" id="email_1" required>
+                        <input type="password" placeholder="Password*" id="pass_1" required>
+                        <input type="password" placeholder="Confirm Password*" id="pass_2" required>
+
+                        <div class="checkboxContainer" id="cheak">
+                            <input type="checkbox" name="lang" value="Accepted" id="cheak_one" required>
+                            <label>Accept <a href="#">Terms of service</a> and
+                                <a href="#">privacy policy</a>.</label>
+                        </div>
+
+                        <button class="Button_style1" id="fifthButton" type="submit">
+                            <p>Register</p>
+                        </button>
+
+                        <footer>Already have an account? <a href="#" onclick="mover_left()">login</a></footer>
+                    </form>
+                </div>
+
+                <img src="../assets/images/logo.png" alt="" id="img_login_register">
+
+                <div class="login_container">
+                    <form action="#" class="login_form">
+                        <header>
+                            <h1><ins><strong>Sign In <img src="../assets/images/burger.png" alt=""
+                                            id="burger_login"></strong></ins></h1>
+                        </header>
+
+                        <span class="account-type-badge" id="login_type_badge"></span>
+                        <input type="hidden" name="user_type" id="user_type" value="">
+                        <input type="email" name="login_email" id="login_email" placeholder="Email Address" required>
+                        <input type="password" name="login_pass" id="login_pass" placeholder="Password" required>
+
+                        <button class="Button_style1" id="fifthButton" type="submit">
+                            <p>Login</p>
+                        </button>
+
+                        <footer>Don't have an account? <a href="#" onclick="mover_right()">register</a></footer>
+                    </form>
+                </div>
+            </section>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/auth-api.js"></script>
+    <script src="../assets/js/login_register.js"></script>
+</body>
+
+</html>

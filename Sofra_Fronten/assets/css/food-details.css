@@ -1,0 +1,297 @@
+/* =====================================================================
+   SOFRA — FOOD DETAILS PAGE
+   ===================================================================== */
+
+.fd-section {
+    padding: 40px 0 80px;
+}
+
+/* ---------- Breadcrumb ---------- */
+.fd-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 28px;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.fd-breadcrumb a {
+    color: var(--text-secondary);
+    transition: color var(--transition-smooth);
+}
+
+.fd-breadcrumb a:hover {
+    color: var(--brand-red);
+}
+
+.fd-breadcrumb span:last-child {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+/* ---------- Layout ---------- */
+.fd-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: start;
+}
+
+/* ---------- Gallery ---------- */
+.fd-gallery {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: var(--bg-surface-2);
+    box-shadow: var(--shadow-soft);
+    aspect-ratio: 4 / 3;
+}
+
+.fd-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fd-gallery .menu-badge {
+    top: 20px;
+}
+
+/* ---------- Info ---------- */
+.fd-info h1 {
+    font-size: 2.1rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0 0 14px;
+}
+
+.fd-desc {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    font-size: 1.02rem;
+    margin-bottom: 18px;
+}
+
+.fd-price {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: var(--brand-red);
+    background: var(--bg-surface-2);
+    padding: 8px 22px;
+    border-radius: 999px;
+    margin-bottom: 30px;
+}
+
+/* ---------- Ingredients ---------- */
+.fd-ingredients h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 14px;
+}
+
+.fd-ingredients ul {
+    list-style: none;
+    margin: 0 0 34px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 16px;
+}
+
+.fd-ingredients li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 12px;
+    padding: 10px 14px;
+}
+
+.fd-ingredients li::before {
+    content: "✓";
+    color: var(--brand-red);
+    font-weight: 800;
+}
+
+/* ---------- Actions ---------- */
+.fd-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.fd-qty {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    background: var(--bg-surface-2);
+    border-radius: 14px;
+    padding: 6px;
+}
+
+.fd-qty button {
+    width: 38px;
+    height: 38px;
+    border: none;
+    border-radius: 10px;
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    font-size: 1.2rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background var(--transition-smooth), color var(--transition-smooth);
+}
+
+.fd-qty button:hover {
+    background: var(--brand-red);
+    color: #fff;
+}
+
+.fd-qty span {
+    min-width: 32px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.05rem;
+    color: var(--text-primary);
+}
+
+.fd-add-btn {
+    min-width: 190px;
+    height: 50px;
+    font-size: 15px;
+}
+
+/* ---------- Favorite Button ---------- */
+.fd-fav-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    height: 50px;
+    padding: 0 20px;
+    border-radius: 14px;
+    border: 2px solid var(--border-soft);
+    background: var(--bg-surface-2);
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all var(--transition-smooth);
+}
+
+.fd-fav-btn:hover {
+    border-color: #ff3b30;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(255, 59, 48, 0.2);
+}
+
+.fd-fav-btn.is-favorite {
+    background: rgba(255, 59, 48, 0.12);
+    border-color: #ff3b30;
+    color: #ff3b30;
+}
+
+.fd-fav-btn .heart-icon {
+    font-size: 1.2rem;
+    transition: transform 0.2s ease;
+}
+
+.fd-fav-btn:hover .heart-icon {
+    transform: scale(1.2);
+}
+
+.fd-cart-link {
+    color: var(--text-secondary);
+    font-weight: 700;
+    font-size: 0.95rem;
+    transition: color var(--transition-smooth);
+}
+
+.fd-cart-link:hover {
+    color: var(--brand-red);
+}
+
+/* ---------- Toast ---------- */
+.fd-toast {
+    margin: 18px 0 0;
+    min-height: 24px;
+    font-weight: 700;
+    color: var(--brand-red-dark);
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.fd-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ---------- Related Dishes Section ---------- */
+.fd-related-container {
+    margin-top: 72px;
+    padding-top: 48px;
+    border-top: 1px solid var(--border-soft);
+}
+
+.fd-related-header {
+    margin-bottom: 32px;
+}
+
+.fd-related-header h2 {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+}
+
+.fd-related-header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ---------- Not found state ---------- */
+.fd-not-found {
+    margin: 0 auto;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 991px) {
+    .fd-wrapper {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .fd-gallery {
+        aspect-ratio: 16 / 10;
+    }
+}
+
+@media (max-width: 575px) {
+    .fd-info h1 {
+        font-size: 1.7rem;
+    }
+
+    .fd-ingredients ul {
+        grid-template-columns: 1fr;
+    }
+
+    .fd-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .fd-add-btn, .fd-fav-btn {
+        width: 100%;
+    }
+}

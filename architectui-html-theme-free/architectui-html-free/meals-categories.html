@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+<title>Sofra Admin | Categories</title>
+<link rel="icon" href="favicon.ico">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+<link href="assets/styles/admin.css" rel="stylesheet">
+</head>
+<body>
+<div class="admin-layout">
+<aside class="admin-sidebar">
+      <div class="sidebar-brand">
+        <img src="assets/images/logo.png" alt="Sofra">
+        <span>Sofra Admin</span>
+      </div>
+      <ul class="admin-nav">
+        <li><a href="index.html"><i class="fa-solid fa-gauge-high"></i><span>Dashboard</span></a></li><li><a href="meals-all.html"><i class="fa-solid fa-utensils"></i><span>All Meals</span></a></li><li><a href="meals-add.html"><i class="fa-solid fa-plus"></i><span>Add Meal</span></a></li><li><a href="meals-categories.html"><i class="fa-solid fa-list"></i><span>Categories</span></a></li><li><a href="orders.html"><i class="fa-solid fa-receipt"></i><span>Orders</span></a></li><li><a href="customers.html"><i class="fa-solid fa-users"></i><span>Customers</span></a></li><li><a href="reviews.html"><i class="fa-solid fa-star"></i><span>Reviews</span></a></li><li><a href="reports.html"><i class="fa-solid fa-chart-simple"></i><span>Reports</span></a></li><li><a href="settings.html"><i class="fa-solid fa-gear"></i><span>Settings</span></a></li>
+      </ul>
+      <div style="padding:1rem 1.2rem;border-top:1px solid rgba(255,255,255,.12);">
+        <a href="#" data-action="logout" style="color:rgba(255,255,255,.75);font-size:.85rem;display:flex;align-items:center;gap:.6rem;">
+          <i class="fa-solid fa-right-from-bracket"></i><span>Log out</span>
+        </a>
+      </div>
+    </aside>
+  <div class="admin-main">
+    <header class="admin-topbar">
+      <div style="display:flex;align-items:center;gap:.8rem;">
+        <button id="sidebarToggle" aria-label="Toggle menu"><i class="fa-solid fa-bars"></i></button>
+        <h1>Categories</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="topbar-user" id="topbarUser">Admin</span>
+        <button class="btn-logout" data-action="logout"><i class="fa-solid fa-right-from-bracket"></i> Log out</button>
+      </div>
+    </header>
+    <main class="admin-content">
+
+      <div class="a-card">
+        <h2 class="a-card-title">Categories</h2>
+        <div style="overflow-x:auto;">
+          <table class="a-table">
+            <thead><tr><th>Category</th><th>Description</th><th>Meals</th></tr></thead>
+            <tbody id="catBody">
+              <tr><td colspan="3" style="text-align:center;color:var(--text-secondary);padding:1.5rem;">Loading categories...</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="color:var(--text-secondary);font-size:.85rem;margin:1rem 0 0;">Categories are managed directly in the menu setup. This view is read-only.</p>
+      </div>
+
+    </main>
+  </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="auth-guard.js"></script>
+<script src="assets/scripts/admin-ui.js"></script>
+<script>
+(function(){
+  function token(){ return localStorage.getItem('sofra_session_token') || ''; }
+  Promise.all([
+    fetch('/sofra/backend/api/get_categories.php').then(function(r){ return r.json(); }),
+    fetch('/sofra/backend/api/get_meals.php?available=0', { headers: token() ? {'Authorization':'Bearer '+token()} : {} }).then(function(r){ return r.json(); })
+  ]).then(function(res){
+    var cats = (res[0] && res[0].success) ? res[0].results : [];
+    var meals = (res[1] && res[1].success) ? res[1].results : [];
+    var tbody = document.getElementById('catBody');
+    if (!cats.length) { tbody.innerHTML = '<tr><td colspan="3" style="text-align:center;color:var(--text-secondary);padding:1.5rem;">No categories found.</td></tr>'; return; }
+    tbody.innerHTML = '';
+    cats.forEach(function(c){
+      var count = meals.filter(function(m){ return String(m.category_id) === String(c.id); }).length;
+      var tr = document.createElement('tr');
+      tr.innerHTML = '<td><b>' + (c.name||'') + '</b></td><td>' + (c.description||'&mdash;') + '</td><td>' + count + '</td>';
+      tbody.appendChild(tr);
+    });
+  }).catch(function(){
+    document.getElementById('catBody').innerHTML = '<tr><td colspan="3" style="text-align:center;color:var(--text-secondary);padding:1.5rem;">Could not load categories.</td></tr>';
+  });
+})();
+</script>
+</body>
+</html>

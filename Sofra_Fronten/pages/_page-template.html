@@ -1,0 +1,81 @@
+<!--
+    ==========================================================================
+    قالب صفحة جديدة — Sofra
+    ==========================================================================
+    اعمل نسخة من الملف ده لأي صفحة جديدة من الـ 25 صفحة، وغيّر بس:
+      1) <title>
+      2) data-page="..."  (استخدم نفس الاسم الموجود في data-nav-key بملف
+         partials/navbar.html لو الصفحة دي من عناصر القائمة الرئيسية،
+         عشان الرابط يتظلل تلقائي وهو active)
+      3) اربط ملف CSS خاص بالصفحة (زي assets/css/menu.css) لو محتاج
+      4) اكتب المحتوى جوه <main id="main-content">...</main>
+
+    ملاحظات مهمة:
+      - متكتبش الـ navbar ولا الـ footer يدوي أبدًا. سيبهم زي ما هما:
+            <div id="sofra-navbar"></div>
+            <div id="sofra-footer"></div>
+        وهما هيتحقنوا تلقائي من partials/navbar.html و partials/footer.html
+        عن طريق assets/js/include.js. كده لو غيّرنا حاجة في الـ navbar،
+        هتتغيّر في الـ 25 صفحة مرة واحدة بس.
+
+      - كل الألوان لازم تتاخد من المتغيرات الموجودة في
+        assets/css/variables.css (زي var(--brand-red), var(--text-primary),
+        var(--bg-surface) ...) مش ألوان جامدة (hardcoded)، عشان الوضع
+        الصباحي/الليلي/الأوتوماتيك يشتغل صح تلقائي على أي عنصر جديد.
+
+      - سكريبتات theme-init.js و include.js و theme.js لازم تفضل موجودة
+        بنفس الترتيب في كل صفحة.
+    ==========================================================================
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra | اسم الصفحة هنا</title>
+
+    <!-- 1. لازم يكون أول سكريبت في الصفحة -->
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <!-- 2. الترتيب مهم: variables -> base -> header/footer/theme-toggle -> CSS خاص بالصفحة -->
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+            <script src="../assets/js/user-auth-guard.js"></script>
+
+    <!-- <link rel="stylesheet" href="../assets/css/PAGE_NAME.css"> -->
+</head>
+
+<!-- data-page = مفتاح الصفحة لو موجود في navbar.html (home / menu / about / contact / cart) -->
+<body data-page="PAGE_KEY" data-require-auth="true">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+
+    <div id="sofra-navbar"></div>
+
+    <main id="main-content" class="page-content">
+        <!-- محتوى الصفحة هنا -->
+    </main>
+
+    <div id="sofra-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- 3. الثلاثة سكريبتات دول ثابتين في كل صفحة -->
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/theme.js"></script>
+        <script src="../assets/js/auth-api.js"></script>
+
+    <!-- <script src="../assets/js/PAGE_NAME.js"></script> -->
+</body>
+
+</html>

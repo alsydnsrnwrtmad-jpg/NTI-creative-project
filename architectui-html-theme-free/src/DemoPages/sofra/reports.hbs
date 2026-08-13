@@ -1,0 +1,120 @@
+{{#> base }}
+    {{> AppSidebar/sidebar sofra-reports=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            {{> AppMain/page-title }}
+
+            <!-- Summary Cards -->
+            <div class="row">
+                <div class="col-md-6 col-xl-3">
+                    <div class="card mb-3 widget-content bg-midnight-bloom">
+                        <div class="widget-content-wrapper text-white">
+                            <div class="widget-content-left">
+                                <div class="widget-heading">Total Sales</div>
+                            </div>
+                            <div class="widget-content-right">
+                                <div class="widget-numbers text-white"><span>24,500 EGP</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card mb-3 widget-content bg-arielle-smile">
+                        <div class="widget-content-wrapper text-white">
+                            <div class="widget-content-left">
+                                <div class="widget-heading">Total Orders</div>
+                            </div>
+                            <div class="widget-content-right">
+                                <div class="widget-numbers text-white"><span>125</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card mb-3 widget-content bg-grow-early">
+                        <div class="widget-content-wrapper text-white">
+                            <div class="widget-content-left">
+                                <div class="widget-heading">Avg. Order Value</div>
+                            </div>
+                            <div class="widget-content-right">
+                                <div class="widget-numbers text-white"><span>196 EGP</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-3">
+                    <div class="card mb-3 widget-content bg-tempting-azure">
+                        <div class="widget-content-wrapper text-white">
+                            <div class="widget-content-left">
+                                <div class="widget-heading">Total Customers</div>
+                            </div>
+                            <div class="widget-content-right">
+                                <div class="widget-numbers text-white"><span>340</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header">
+                            <i class="header-icon pe-7s-graph3 icon-gradient bg-mean-fruit"> </i>
+                            Sales Summary
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container-lg">
+                                <canvas id="reports-sales-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header">
+                            <i class="header-icon pe-7s-cup icon-gradient bg-happy-fisher"> </i>
+                            Best Selling Meals
+                        </div>
+                        <div class="card-body">
+                            <div class="chart-container-lg">
+                                <canvas id="reports-meals-chart"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header">Orders Summary</div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between"><span>Pending</span><b>18</b></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Preparing</span><b>12</b></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Out for Delivery</span><b>9</b></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Completed</span><b>78</b></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Cancelled</span><b>8</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="main-card mb-3 card">
+                        <div class="card-header">Customer Summary</div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item d-flex justify-content-between"><span>Total Customers</span><b>340</b></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>New This Month</span><b>27</b></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Returning Customers</span><b>63%</b></li>
+                                <li class="list-group-item d-flex justify-content-between"><span>Avg. Orders / Customer</span><b>3.4</b></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{{/base}}

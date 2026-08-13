@@ -1,0 +1,60 @@
+{{#> base }}
+    {{> AppSidebar/sidebar sofra-meals-add=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            {{> AppMain/page-title }}
+
+            <div class="main-card mb-3 card">
+                <div class="card-header">
+                    Add / Edit Meal
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="mealName">Meal Name</label>
+                                <input type="text" class="form-control" id="mealName" placeholder="e.g. Mixed Grill">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="mealCategory">Category</label>
+                                <select class="form-select" id="mealCategory">
+                                    <option value="" selected disabled>Loading categories…</option>
+                                    <!-- Populated dynamically at runtime by assets/scripts/admin-meals.js
+                                         from GET /sofra/backend/api/get_categories.php -->
+                                </select>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="mealPrice">Price (EGP)</label>
+                                <input type="number" class="form-control" id="mealPrice" placeholder="e.g. 120">
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label class="form-label" for="mealAvailability">Availability</label>
+                                <select class="form-select" id="mealAvailability">
+                                    <option selected>Available</option>
+                                    <option>Unavailable</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="mealDescription">Description</label>
+                            <textarea class="form-control" id="mealDescription" rows="4" placeholder="Short description of the meal"></textarea>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label" for="mealImage">Meal Image</label>
+                            <input class="form-control" type="file" id="mealImage">
+                        </div>
+                        <div class="mt-4">
+                            <button type="submit" class="btn btn-primary">
+                                <i class="fa-solid fa-floppy-disk me-1"></i> Save Meal
+                            </button>
+                            <a href="meals-all.html" class="btn btn-outline-secondary ms-2">Cancel</a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{{/base}}

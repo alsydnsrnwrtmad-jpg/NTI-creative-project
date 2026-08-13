@@ -1,0 +1,78 @@
+{{#> base }}
+    {{> AppSidebar/sidebar sofra-reviews=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            {{> AppMain/page-title }}
+
+            <div class="main-card mb-3 card">
+                <div class="card-header">Reviews</div>
+                <div class="table-responsive">
+                    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Customer</th>
+                                <th>Meal</th>
+                                <th>Rating</th>
+                                <th>Comment</th>
+                                <th>Date</th>
+                                <th>Status</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ahmed Samir</td>
+                                <td>Mixed Grill</td>
+                                <td class="text-warning">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                </td>
+                                <td>Excellent flavor, will order again!</td>
+                                <td>08 Aug 2026</td>
+                                <td><div class="badge bg-success">Published</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-success me-1"><i class="fa-solid fa-check"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-warning me-1"><i class="fa-solid fa-eye-slash"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Mona Fathy</td>
+                                <td>Seafood Pasta</td>
+                                <td class="text-warning">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted opacity-3"></i>
+                                </td>
+                                <td>Good taste, delivery was a bit late.</td>
+                                <td>07 Aug 2026</td>
+                                <td><div class="badge bg-warning text-dark">Pending</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-success me-1"><i class="fa-solid fa-check"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-warning me-1"><i class="fa-solid fa-eye-slash"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Youssef Adel</td>
+                                <td>Beef Shawarma</td>
+                                <td class="text-warning">
+                                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star text-muted opacity-3"></i><i class="fa-solid fa-star text-muted opacity-3"></i>
+                                </td>
+                                <td>Average, needed more sauce.</td>
+                                <td>06 Aug 2026</td>
+                                <td><div class="badge bg-secondary">Hidden</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-success me-1"><i class="fa-solid fa-check"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-warning me-1"><i class="fa-solid fa-eye-slash"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{{/base}}

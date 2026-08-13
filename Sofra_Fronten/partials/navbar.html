@@ -1,0 +1,132 @@
+<nav class="navbar navbar-expand-lg fixed-top" id="sofraNavbar">
+    <div class="container-fluid align-items-center">
+        <a href="/pages/index.html" class="nav_logo"><img src="/assets/images/logo.png" alt="Sofra Restaurant logo"></a>
+        <a class="navbar-brand me-3" href="/pages/index.html">Sofra</a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-between align-items-center" id="navbarSupportedContent">
+            <!-- روابط التنقل مع مسافات منتظمة -->
+            <ul class="navbar-nav mb-2 mb-lg-0 align-items-center gap-2">
+                <li class="nav-item">
+                    <a class="nav-link" data-nav-key="home" data-i18n="home" href="/pages/index.html">الرئيسية</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-nav-key="menu" data-i18n="menu" href="/pages/menu.html">المنيو</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-nav-key="about" data-i18n="about" href="/pages/about.html">من نحن</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-nav-key="contact" data-i18n="contact" href="/pages/contact.html">تواصل معنا</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" data-nav-key="cart" data-i18n="cart" href="/pages/cart.html">السلة 🛒</a>
+                </li>
+            </ul>
+
+            <!-- مجموعة العناصر اليسرى (بحث، ثيم، لغة، حسابي) متناسقة وبدون تداخل -->
+            <div class="d-flex align-items-center gap-3 flex-wrap my-lg-0">
+                <form class="d-flex nav-search m-0 align-items-center" role="search">
+                    <input class="form-control me-2" type="search" placeholder="ابحث" data-i18n-placeholder="searchPlaceholder" aria-label="Search" />
+                    <button class="Button_style2 m-0 p-2 d-flex align-items-center justify-content-center" id="small_button_search" type="submit" aria-label="بحث" style="min-width: 40px; height: 40px;">
+                        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        </svg>
+                    </button>
+                </form>
+
+                <!-- Light/Dark Mode Switcher -->
+                <div class="theme-switch d-flex align-items-center gap-1" role="group" aria-label="اختيار وضع الألوان">
+                    <button type="button" data-theme="light" aria-label="الوضع الصباحي" title="الوضع الصباحي">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                            <circle cx="12" cy="12" r="4" />
+                            <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4" />
+                        </svg>
+                    </button>
+                    <button type="button" data-theme="dark" aria-label="الوضع الليلي" title="الوضع الليلي">
+                        <svg viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+                        </svg>
+                    </button>
+                    <button type="button" data-theme="auto" aria-label="الوضع الأوتوماتيكي" title="تلقائي حسب النظام">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <rect x="2" y="4" width="20" height="14" rx="2" />
+                            <path d="M8 21h8M12 18v3" />
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Language Button (Flag + Short code only) -->
+                <button type="button" class="sofra-lang-btn d-flex align-items-center gap-1 px-3 py-2" id="sofraLangBtn" aria-label="تغيير اللغة">
+                    <span id="sofraLangBtnFlag" class="fs-6">🇪🇬</span>
+                    <span id="sofraLangBtnText" class="fw-bold">AR</span>
+                </button>
+ <div id="user-auth-section">
+                    <a href="/pages/choice.html" class="nav-account-link text-decoration-none" onclick="logoutUser()">
+                        <span data-i18n="account">تسجيل خروج</span>
+                    </a>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+</nav>
+
+<!-- 3D Glassmorphic Sofra Aura Spectrum Modal -->
+<div class="sofra-aura-modal" id="sofraAuraModal" role="dialog" aria-modal="true">
+    <div class="sofra-aura-card">
+        <button type="button" class="sofra-aura-close" id="sofraAuraClose" aria-label="Close">&times;</button>
+        <div class="sofra-aura-header">
+            <span class="aura-icon-main">🔮</span>
+            <h3>Sofra Aura Spectrum</h3>
+            <p>اختر هالة الألوان والروح التي تناسب أسلوبك وتذوقك اليوم</p>
+        </div>
+        <div class="sofra-aura-gems-grid">
+            <!-- أزرار الهالة (معلقة مؤقتاً بناءً على كودك) -->
+        </div>
+    </div>
+</div>
+
+<!-- Language Picker Modal Popup -->
+<div class="sofra-lang-modal" id="sofraLangModal" role="dialog" aria-modal="true">
+    <div class="sofra-lang-modal-card">
+        <button type="button" class="sofra-lang-modal-close" id="sofraLangModalClose" aria-label="Close">&times;</button>
+        <div class="sofra-lang-modal-header">
+            <span class="sofra-lang-modal-icon">🌐</span>
+            <h3 data-i18n="modalTitle">اختاري اللغة المناسبة لكي</h3>
+            <p data-i18n="modalSub">يسعدنا تقديم سفرة باللغة التي تفضلينها</p>
+        </div>
+        <div class="sofra-lang-options">
+            <button type="button" class="lang-option-btn active" data-lang="ar">
+                <span class="flag">🇪🇬</span>
+                <div class="info">
+                    <strong>العربية</strong>
+                    <span>Arabic</span>
+                </div>
+                <span class="check">✓</span>
+            </button>
+            <button type="button" class="lang-option-btn" data-lang="en">
+                <span class="flag">🇬🇧</span>
+                <div class="info">
+                    <strong>English</strong>
+                    <span>الإنجليزية</span>
+                </div>
+                <span class="check">✓</span>
+            </button>
+            <button type="button" class="lang-option-btn" data-lang="fr">
+                <span class="flag">🇫🇷</span>
+                <div class="info">
+                    <strong>Français</strong>
+                    <span>الفرنسية</span>
+                </div>
+                <span class="check">✓</span>
+            </button>
+        </div>
+    </div>
+</div>

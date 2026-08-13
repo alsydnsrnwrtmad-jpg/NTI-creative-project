@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra | All The World's Flavors</title>
+
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="../assets/css/home.css">
+        <script src="../assets/js/user-auth-guard.js"></script>
+
+</head>
+
+<body data-page="home" data-require-auth="true">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+
+    <div id="sofra-navbar"></div>
+
+    <main id="main-content" class="page-content page-content--home">
+
+        <!-- ========== Cinematic Hero Slider ========== -->
+        <section class="cinematic-hero" aria-label="Featured dishes slideshow" aria-roledescription="carousel">
+            <div class="cinematic-hero__slides" id="cinematicSlides">
+
+                <article class="cinematic-hero__slide is-active" data-slide="0" aria-hidden="false">
+                    <img class="cinematic-hero__bg"
+                        src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=1920&q=85&auto=format&fit=crop"
+                        alt="Fresh wood-fired pizza with melted cheese and basil" loading="eager" fetchpriority="high">
+                    <div class="cinematic-hero__overlay"></div>
+                    <div class="cinematic-hero__content container-fluid">
+                        <span class="cinematic-hero__tag">🇮🇹 Italian · Chef's Pick</span>
+                        <h1 class="cinematic-hero__title">Neapolitan Pizza<br><em>straight from the oven</em></h1>
+                        <p class="cinematic-hero__desc">Charred crust, San Marzano tomatoes, fresh buffalo mozzarella — delivered in 25 minutes.</p>
+                        <div class="cinematic-hero__actions">
+                            <a class="btn-hero-primary" href="menu.html">Order Now 🍕</a>
+                            <span class="cinematic-hero__price">From <strong>EGP 149</strong></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cinematic-hero__slide" data-slide="1" aria-hidden="true">
+                    <img class="cinematic-hero__bg"
+                        src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=1920&q=85&auto=format&fit=crop"
+                        alt="Juicy gourmet burger with fresh vegetables" loading="lazy">
+                    <div class="cinematic-hero__overlay"></div>
+                    <div class="cinematic-hero__content container-fluid">
+                        <span class="cinematic-hero__tag">🇺🇸 American · Best Seller</span>
+                        <h1 class="cinematic-hero__title">The Ultimate<br><em>Smash Burger</em></h1>
+                        <p class="cinematic-hero__desc">Double patty, aged cheddar, secret sauce — crispy edges, juicy center.</p>
+                        <div class="cinematic-hero__actions">
+                            <a class="btn-hero-primary" href="menu.html">Order Now 🍔</a>
+                            <span class="cinematic-hero__price">From <strong>EGP 189</strong></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cinematic-hero__slide" data-slide="2" aria-hidden="true">
+                    <img class="cinematic-hero__bg"
+                        src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=1920&q=85&auto=format&fit=crop"
+                        alt="Premium sushi platter with salmon and tuna" loading="lazy">
+                    <div class="cinematic-hero__overlay"></div>
+                    <div class="cinematic-hero__content container-fluid">
+                        <span class="cinematic-hero__tag">🇯🇵 Japanese · Premium</span>
+                        <h1 class="cinematic-hero__title">Omakase Sushi<br><em>crafted by hand</em></h1>
+                        <p class="cinematic-hero__desc">Grade-A salmon, bluefin tuna, and seasonal nigiri — flown in fresh daily.</p>
+                        <div class="cinematic-hero__actions">
+                            <a class="btn-hero-primary" href="menu.html">Order Now 🍣</a>
+                            <span class="cinematic-hero__price">From <strong>EGP 299</strong></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cinematic-hero__slide" data-slide="3" aria-hidden="true">
+                    <img class="cinematic-hero__bg"
+                        src="https://images.unsplash.com/photo-1544025162-d76694265947?w=1920&q=85&auto=format&fit=crop"
+                        alt="Middle Eastern mixed grill with kebab and rice" loading="lazy">
+                    <div class="cinematic-hero__overlay"></div>
+                    <div class="cinematic-hero__content container-fluid">
+                        <span class="cinematic-hero__tag">🇪🇬 Egyptian · Local Favorite</span>
+                        <h1 class="cinematic-hero__title">Mixed Grill<br><em>over charcoal</em></h1>
+                        <p class="cinematic-hero__desc">Kofta, shish tawook, and lamb chops — marinated 24 hours in family spices.</p>
+                        <div class="cinematic-hero__actions">
+                            <a class="btn-hero-primary" href="menu.html">Order Now 🔥</a>
+                            <span class="cinematic-hero__price">From <strong>EGP 249</strong></span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="cinematic-hero__slide" data-slide="4" aria-hidden="true">
+                    <img class="cinematic-hero__bg"
+                        src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=1920&q=85&auto=format&fit=crop"
+                        alt="Creamy Italian pasta with parmesan" loading="lazy">
+                    <div class="cinematic-hero__overlay"></div>
+                    <div class="cinematic-hero__content container-fluid">
+                        <span class="cinematic-hero__tag">🇮🇹 Italian · Comfort Food</span>
+                        <h1 class="cinematic-hero__title">Truffle Pasta<br><em>silky &amp; rich</em></h1>
+                        <p class="cinematic-hero__desc">Hand-rolled fettuccine, black truffle cream, aged Parmigiano-Reggiano.</p>
+                        <div class="cinematic-hero__actions">
+                            <a class="btn-hero-primary" href="menu.html">Order Now 🍝</a>
+                            <span class="cinematic-hero__price">From <strong>EGP 179</strong></span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Thumbnail filmstrip -->
+            <div class="cinematic-hero__filmstrip" aria-label="Slide thumbnails">
+                <button type="button" class="filmstrip-thumb is-active" data-goto="0" aria-label="Pizza slide">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=120&q=70&auto=format&fit=crop" alt="">
+                    <span>Pizza</span>
+                </button>
+                <button type="button" class="filmstrip-thumb" data-goto="1" aria-label="Burger slide">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=120&q=70&auto=format&fit=crop" alt="">
+                    <span>Burger</span>
+                </button>
+                <button type="button" class="filmstrip-thumb" data-goto="2" aria-label="Sushi slide">
+                    <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=120&q=70&auto=format&fit=crop" alt="">
+                    <span>Sushi</span>
+                </button>
+                <button type="button" class="filmstrip-thumb" data-goto="3" aria-label="Grill slide">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=120&q=70&auto=format&fit=crop" alt="">
+                    <span>Grill</span>
+                </button>
+                <button type="button" class="filmstrip-thumb" data-goto="4" aria-label="Pasta slide">
+                    <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=120&q=70&auto=format&fit=crop" alt="">
+                    <span>Pasta</span>
+                </button>
+            </div>
+
+            <!-- Progress bar -->
+            <div class="cinematic-hero__progress" aria-hidden="true">
+                <div class="cinematic-hero__progress-bar" id="heroProgressBar"></div>
+            </div>
+
+            <!-- Nav arrows -->
+            <button type="button" class="cinematic-hero__nav cinematic-hero__nav--prev" id="heroPrev" aria-label="Previous slide">&#10094;</button>
+            <button type="button" class="cinematic-hero__nav cinematic-hero__nav--next" id="heroNext" aria-label="Next slide">&#10095;</button>
+        </section>
+
+        <!-- ========== Stats strip ========== -->
+        <section class="stats-strip" aria-label="Restaurant stats">
+            <div class="stats-strip__inner">
+                <div class="stat-item reveal">
+                    <strong>120+</strong>
+                    <span>Dishes worldwide</span>
+                </div>
+                <div class="stat-item reveal">
+                    <strong>4.9★</strong>
+                    <span>Average rating</span>
+                </div>
+                <div class="stat-item reveal">
+                    <strong>25 min</strong>
+                    <span>Average delivery</span>
+                </div>
+                <div class="stat-item reveal">
+                    <strong>15K+</strong>
+                    <span>Happy customers</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== Cuisine marquee ========== -->
+        <section class="cuisine-marquee" aria-hidden="true">
+            <div class="cuisine-marquee__track">
+                <span>🇮🇹 Italian</span><span>🇯🇵 Japanese</span><span>🇺🇸 American</span><span>🇪🇬 Egyptian</span>
+                <span>🇲🇽 Mexican</span><span>🇮🇳 Indian</span><span>🇹🇭 Thai</span><span>🇫🇷 French</span>
+                <span>🇰🇷 Korean</span><span>🇱🇧 Lebanese</span><span>🇨🇳 Chinese</span><span>🇹🇷 Turkish</span>
+                <!-- duplicate for seamless loop -->
+                <span>🇮🇹 Italian</span><span>🇯🇵 Japanese</span><span>🇺🇸 American</span><span>🇪🇬 Egyptian</span>
+                <span>🇲🇽 Mexican</span><span>🇮🇳 Indian</span><span>🇹🇭 Thai</span><span>🇫🇷 French</span>
+                <span>🇰🇷 Korean</span><span>🇱🇧 Lebanese</span><span>🇨🇳 Chinese</span><span>🇹🇷 Turkish</span>
+            </div>
+        </section>
+
+        <!-- ========== Featured dishes carousel (Netflix-style) ========== -->
+        <section class="featured-section">
+            <div class="featured-section__header reveal">
+                <div>
+                    <span class="eyebrow">🔥 Trending Now</span>
+                    <h2>Most ordered this week</h2>
+                </div>
+                <a class="featured-section__see-all" href="menu.html">View full menu →</a>
+            </div>
+
+            <div class="featured-carousel" id="featuredCarousel">
+                <article class="dish-card reveal">
+                    <div class="dish-card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=600&q=80&auto=format&fit=crop" alt="Margherita Pizza" loading="lazy">
+                        <span class="dish-card__badge">#1 Best Seller</span>
+                    </div>
+                    <div class="dish-card__body">
+                        <h3>Margherita Pizza</h3>
+                        <p>Classic Neapolitan with fresh basil &amp; mozzarella</p>
+                        <div class="dish-card__footer">
+                            <span class="dish-card__price">EGP 149</span>
+                            <a href="food-details.html?id=1" class="dish-card__btn">+ Add</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&q=80&auto=format&fit=crop" alt="Smash Burger" loading="lazy">
+                        <span class="dish-card__badge dish-card__badge--hot">🔥 Hot</span>
+                    </div>
+                    <div class="dish-card__body">
+                        <h3>Double Smash Burger</h3>
+                        <p>Two patties, cheddar, pickles &amp; secret sauce</p>
+                        <div class="dish-card__footer">
+                            <span class="dish-card__price">EGP 189</span>
+                            <a href="food-details.html?id=2" class="dish-card__btn">+ Add</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=600&q=80&auto=format&fit=crop" alt="Salmon Nigiri" loading="lazy">
+                    </div>
+                    <div class="dish-card__body">
+                        <h3>Salmon Nigiri Set</h3>
+                        <p>8 pieces of premium Atlantic salmon</p>
+                        <div class="dish-card__footer">
+                            <span class="dish-card__price">EGP 299</span>
+                            <a href="food-details.html?id=3" class="dish-card__btn">+ Add</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=600&q=80&auto=format&fit=crop" alt="Mixed Grill" loading="lazy">
+                        <span class="dish-card__badge">Chef's Pick</span>
+                    </div>
+                    <div class="dish-card__body">
+                        <h3>Mixed Grill Platter</h3>
+                        <p>Kofta, tawook &amp; lamb chops over charcoal</p>
+                        <div class="dish-card__footer">
+                            <span class="dish-card__price">EGP 249</span>
+                            <a href="food-details.html?id=4" class="dish-card__btn">+ Add</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=600&q=80&auto=format&fit=crop" alt="Truffle Pasta" loading="lazy">
+                    </div>
+                    <div class="dish-card__body">
+                        <h3>Truffle Fettuccine</h3>
+                        <p>Creamy sauce with black truffle shavings</p>
+                        <div class="dish-card__footer">
+                            <span class="dish-card__price">EGP 179</span>
+                            <a href="food-details.html?id=5" class="dish-card__btn">+ Add</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="dish-card reveal">
+                    <div class="dish-card__img-wrap">
+                        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&q=80&auto=format&fit=crop" alt="Pepperoni Pizza" loading="lazy">
+                        <span class="dish-card__badge dish-card__badge--hot">🔥 Hot</span>
+                    </div>
+                    <div class="dish-card__body">
+                        <h3>Pepperoni Pizza</h3>
+                        <p>Crispy crust, mozzarella &amp; pepperoni</p>
+                        <div class="dish-card__footer">
+                            <span class="dish-card__price">EGP 169</span>
+                            <a href="food-details.html?id=6" class="dish-card__btn">+ Add</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- ========== Why Sofra ========== -->
+        <section class="section-heading reveal">
+            <span class="eyebrow">Why Sofra</span>
+            <h2>Cooked like home, from everywhere</h2>
+            <p>We partner with chefs who grew up on these recipes — not test kitchens guessing at them.</p>
+        </section>
+
+        <section class="highlights">
+            <article class="highlight-card reveal">
+                <div class="highlight-card__img">
+                    <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=400&q=80&auto=format&fit=crop" alt="Chef cooking fresh food" loading="lazy">
+                </div>
+                <div class="icon-badge">🔥</div>
+                <h3>Fresh, never frozen</h3>
+                <p>Every order is cooked after you tap "Order", not reheated from a warehouse shelf.</p>
+            </article>
+            <article class="highlight-card reveal">
+                <div class="highlight-card__img">
+                    <img src="https://images.unsplash.com/photo-1526367790999-0150786686a2?w=400&q=80&auto=format&fit=crop" alt="Fast delivery scooter" loading="lazy">
+                </div>
+                <div class="icon-badge">🚀</div>
+                <h3>Fast to your door</h3>
+                <p>Real-time tracking from the kitchen to your doorstep, with an honest ETA.</p>
+            </article>
+            <article class="highlight-card reveal">
+                <div class="highlight-card__img">
+                    <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&q=80&auto=format&fit=crop" alt="Authentic world cuisine dishes" loading="lazy">
+                </div>
+                <div class="icon-badge">🌶️</div>
+                <h3>Authentic recipes</h3>
+                <p>Sourced from families and chefs across continents — not a fusion guess.</p>
+            </article>
+        </section>
+
+        <!-- ========== Testimonials ========== -->
+        <section class="testimonials-section">
+            <div class="section-heading reveal">
+                <span class="eyebrow">💬 What people say</span>
+                <h2>Loved by food lovers across Cairo</h2>
+            </div>
+            <div class="testimonials-grid">
+                <blockquote class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p>"The mixed grill is exactly like my grandmother's — smoky, tender, and perfectly spiced. Sofra is my go-to every Friday."</p>
+                    <footer>
+                        <img src="https://i.pravatar.cc/48?img=12" alt="" width="48" height="48">
+                        <div><strong>Nour El-Din</strong><span>Maadi, Cairo</span></div>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p>"Best sushi in Cairo, hands down. The salmon nigiri melts in your mouth. Delivered in 22 minutes — unreal."</p>
+                    <footer>
+                        <img src="https://i.pravatar.cc/48?img=32" alt="" width="48" height="48">
+                        <div><strong>Sara Hassan</strong><span>Zamalek, Cairo</span></div>
+                    </footer>
+                </blockquote>
+                <blockquote class="testimonial-card reveal">
+                    <div class="testimonial-card__stars">★★★★★</div>
+                    <p>"I order the smash burger every week. Crispy edges, juicy center, and the secret sauce is addictive. 10/10."</p>
+                    <footer>
+                        <img src="https://i.pravatar.cc/48?img=15" alt="" width="48" height="48">
+                        <div><strong>Omar Farouk</strong><span>Heliopolis, Cairo</span></div>
+                    </footer>
+                </blockquote>
+            </div>
+        </section>
+
+        <!-- ========== Mascot + mini hero ========== -->
+        <section class="brand-spotlight reveal">
+            <div class="brand-spotlight__copy">
+                <span class="eyebrow">🌍 All The World's Flavors</span>
+                <h2>Every cuisine on <span>one table</span></h2>
+                <p>From Italian pasta to Middle Eastern grills, Sofra brings dishes from every corner of the world to your door.</p>
+                <a class="btn-hero-secondary" href="about.html">Discover Our Story</a>
+            </div>
+            <div class="brand-spotlight__visual">
+                <div class="blob" aria-hidden="true"></div>
+                <img src="../assets/images/pizza_steef.png" alt="Sofra's cheerful pizza slice mascot">
+            </div>
+        </section>
+
+        <!-- ========== CTA ========== -->
+        <section class="cta-banner reveal">
+            <div class="cta-banner-inner">
+                <div>
+                    <h2>Hungry already? We noticed.</h2>
+                    <p>Create your account and get your first order to the table in under 30 minutes.</p>
+                </div>
+                <a class="btn-hero-primary" href="login.html">Create Account</a>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="sofra-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/auth-api.js"></script>
+    <script src="../assets/js/navbar-auth.js"></script>
+    <script src="../assets/js/home.js"></script>
+</body>
+
+</html>

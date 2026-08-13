@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra | Search</title>
+
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="../assets/css/placeholder.css">
+            <script src="../assets/js/user-auth-guard.js"></script>
+
+    <style>
+        .search-feedback { margin-bottom: 18px; }
+        .search-card img { height: 160px; object-fit: cover; }
+    </style>
+</head>
+<body data-page="search" data-require-auth="true">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+
+    <div id="sofra-navbar"></div>
+
+    <main id="main-content" class="page-content">
+        <section class="container py-4">
+            <div class="search-header mb-3">
+                <h1 id="searchTitle">نتائج البحث</h1>
+                <p id="searchSub" class="muted">ابحث عن أي كلمة تتعلق بالطبق أو الوصف</p>
+            </div>
+
+            <div id="searchResults">
+                <!-- Results injected here by assets/js/search.js -->
+            </div>
+        </section>
+    </main>
+
+    <div id="sofra-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/auth-api.js"></script>
+</body>
+</html>

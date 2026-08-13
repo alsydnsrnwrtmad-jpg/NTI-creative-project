@@ -1,0 +1,10 @@
+{
+  "name": "sofra-frontend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sofra Restaurant — static front-end",
+  "scripts": {
+    "start": "npx --yes serve . -l 5500",
+    "dev": "npm run start"
+  }
+}

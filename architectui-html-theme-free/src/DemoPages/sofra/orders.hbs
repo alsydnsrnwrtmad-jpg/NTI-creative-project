@@ -1,0 +1,202 @@
+{{#> base }}
+    {{> AppSidebar/sidebar sofra-orders=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            {{> AppMain/page-title }}
+
+            <div class="main-card mb-3 card">
+                <div class="card-body">
+                    <form class="row g-3 align-items-end">
+                        <div class="col-md-4">
+                            <label class="form-label" for="orderSearch">Search Order</label>
+                            <input type="text" class="form-control" id="orderSearch" placeholder="Order ID or customer name">
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label" for="orderStatusFilter">Status</label>
+                            <select class="form-select" id="orderStatusFilter">
+                                <option selected>All Statuses</option>
+                                <option>Pending</option>
+                                <option>Preparing</option>
+                                <option>Out for Delivery</option>
+                                <option>Completed</option>
+                                <option>Cancelled</option>
+                            </select>
+                        </div>
+                        <div class="col-md-3">
+                            <label class="form-label" for="orderDateFilter">Date</label>
+                            <input type="date" class="form-control" id="orderDateFilter">
+                        </div>
+                        <div class="col-md-2">
+                            <button type="submit" class="btn btn-primary w-100">
+                                <i class="fa-solid fa-filter me-1"></i> Filter
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="main-card mb-3 card">
+                <div class="card-header">Orders</div>
+                <div class="table-responsive">
+                    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Order ID</th>
+                                <th>Customer</th>
+                                <th>Items</th>
+                                <th>Total</th>
+                                <th>Payment</th>
+                                <th>Status</th>
+                                <th>Date</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>#1042</td>
+                                <td>Ahmed Samir</td>
+                                <td>2x Grilled Chicken, 1x Koshari</td>
+                                <td>420 EGP</td>
+                                <td>Cash on Delivery</td>
+                                <td><div class="badge bg-warning text-dark">Pending</div></td>
+                                <td>08 Aug 2026</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#orderDetailsModal"><i class="fa-solid fa-eye"></i></button>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-pen"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1041</td>
+                                <td>Mona Fathy</td>
+                                <td>1x Seafood Pasta</td>
+                                <td>210 EGP</td>
+                                <td>Card</td>
+                                <td><div class="badge bg-info">Preparing</div></td>
+                                <td>08 Aug 2026</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#orderDetailsModal"><i class="fa-solid fa-eye"></i></button>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-pen"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1040</td>
+                                <td>Youssef Adel</td>
+                                <td>3x Beef Shawarma</td>
+                                <td>360 EGP</td>
+                                <td>Cash on Delivery</td>
+                                <td><div class="badge bg-primary">Out for Delivery</div></td>
+                                <td>07 Aug 2026</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#orderDetailsModal"><i class="fa-solid fa-eye"></i></button>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-pen"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1039</td>
+                                <td>Salma Nabil</td>
+                                <td>1x Mixed Grill</td>
+                                <td>520 EGP</td>
+                                <td>Card</td>
+                                <td><div class="badge bg-success">Completed</div></td>
+                                <td>07 Aug 2026</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#orderDetailsModal"><i class="fa-solid fa-eye"></i></button>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-pen"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>#1038</td>
+                                <td>Karim Hossam</td>
+                                <td>2x Falafel Sandwich</td>
+                                <td>90 EGP</td>
+                                <td>Cash on Delivery</td>
+                                <td><div class="badge bg-danger">Cancelled</div></td>
+                                <td>06 Aug 2026</td>
+                                <td class="text-center">
+                                    <button type="button" class="btn btn-sm btn-outline-primary me-1" data-bs-toggle="modal" data-bs-target="#orderDetailsModal"><i class="fa-solid fa-eye"></i></button>
+                                    <a href="#" class="btn btn-sm btn-outline-secondary"><i class="fa-solid fa-pen"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{{/base}}
+
+<!-- Order Details Modal -->
+<div class="modal fade" id="orderDetailsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Order Details - #1042</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <h6 class="text-muted text-uppercase font-size-sm">Customer Information</h6>
+                        <p class="mb-1"><b>Ahmed Samir</b></p>
+                        <p class="mb-1">ahmed.samir@example.com</p>
+                        <p class="mb-0">+20 100 123 4567</p>
+                    </div>
+                    <div class="col-md-6">
+                        <h6 class="text-muted text-uppercase font-size-sm">Order Info</h6>
+                        <p class="mb-1">Order Date: 08 Aug 2026</p>
+                        <p class="mb-1">Payment Method: Cash on Delivery</p>
+                        <p class="mb-0">Order Status: <span class="badge bg-warning text-dark">Pending</span></p>
+                    </div>
+                </div>
+                <h6 class="text-muted text-uppercase font-size-sm">Order Items</h6>
+                <table class="table table-borderless table-striped mb-3">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                            <th>Price</th>
+                            <th>Subtotal</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Grilled Chicken</td>
+                            <td>2</td>
+                            <td>150 EGP</td>
+                            <td>300 EGP</td>
+                        </tr>
+                        <tr>
+                            <td>Koshari</td>
+                            <td>1</td>
+                            <td>60 EGP</td>
+                            <td>60 EGP</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="d-flex justify-content-end">
+                    <table class="table table-borderless w-auto mb-0">
+                        <tbody>
+                            <tr>
+                                <td class="text-muted">Subtotal</td>
+                                <td class="text-end">360 EGP</td>
+                            </tr>
+                            <tr>
+                                <td class="text-muted">Delivery Fee</td>
+                                <td class="text-end">60 EGP</td>
+                            </tr>
+                            <tr>
+                                <td><b>Total</b></td>
+                                <td class="text-end"><b>420 EGP</b></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Update Status</button>
+            </div>
+        </div>
+    </div>
+</div>

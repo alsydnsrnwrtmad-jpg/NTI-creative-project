@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra | Cart</title>
+
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="../assets/css/placeholder.css">
+    <link rel="stylesheet" href="../assets/css/cart.css">
+            <script src="../assets/js/user-auth-guard.js"></script>
+
+</head>
+
+<body data-page="cart" data-require-auth="true">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+
+    <div id="sofra-navbar"></div>
+
+    <main id="main-content" class="page-content">
+        <section class="cart-section">
+            <div class="container">
+
+                <div class="cart-header">
+                    <span class="eyebrow">عربة التسوق</span>
+                    <h1>سلة سفرة <span id="cartCountLabel"></span></h1>
+                </div>
+
+                <div id="cartEmpty" class="placeholder-card" hidden>
+                    <img src="../assets/images/logo.png" alt="">
+                    <span class="eyebrow">فاضية</span>
+                    <h1>عربة التسوق فاضية دلوقتي</h1>
+                    <p>هنا هيظهر كل اللي هتطلبه بمجرد ما تبدأ تضيف من المنيو. الصفحة دي هتتربط بالباك اند بعدين.</p>
+                    <a href="menu.html">تصفح المنيو</a>
+                </div>
+
+                <div id="cartContent" class="cart-content" hidden>
+
+                    <div class="cart-items" id="cartItems"></div>
+
+                    <aside class="cart-summary">
+                        <h2>ملخص الطلب</h2>
+
+                        <div class="cart-summary-row">
+                            <span>عدد الأصناف</span>
+                            <span id="summaryItemsCount">0</span>
+                        </div>
+
+                        <div class="cart-summary-row">
+                            <span>المجموع الفرعي</span>
+                            <span id="summarySubtotal">EGP 0</span>
+                        </div>
+
+                        <div class="cart-summary-row">
+                            <span>رسوم التوصيل</span>
+                            <span id="summaryDelivery">EGP 0</span>
+                        </div>
+
+                        <div class="cart-summary-row cart-summary-total">
+                            <span>الإجمالي</span>
+                            <span id="summaryTotal">EGP 0</span>
+                        </div>
+
+                        <button class="add-btn cart-checkout-btn" id="checkoutBtn" type="button">إتمام الطلب</button>
+                        <button class="cart-clear-btn" id="clearCartBtn" type="button">إفراغ السلة</button>
+
+                        <p class="cart-note">هيتم ربط الدفع وتأكيد الطلب بالباك اند لاحقًا.</p>
+                    </aside>
+
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="sofra-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/auth-api.js"></script>
+    <script src="../assets/js/navbar-auth.js"></script>
+    <script src="../assets/js/cart.js"></script>
+</body>
+
+</html>

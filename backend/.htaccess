@@ -1,0 +1,13 @@
+# CORS headers as a fallback (the PHP bootstrap also sets these on every
+# response, so this covers static/edge cases too).
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization, X-Requested-With"
+</IfModule>
+
+# NOTE: We intentionally do NOT rewrite OPTIONS requests here.
+# Every API endpoint already handles CORS preflight (OPTIONS) itself via
+# backend/config/bootstrap.php, which returns an immediate 204. Redirecting
+# OPTIONS to a non-existent index.php here caused every preflight request to
+# 404, which the browser reports as a generic "Network error occurred".

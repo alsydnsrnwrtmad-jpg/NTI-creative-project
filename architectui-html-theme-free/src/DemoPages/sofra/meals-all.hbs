@@ -1,0 +1,96 @@
+{{#> base }}
+    {{> AppSidebar/sidebar sofra-meals-all=this }}
+    <div class="app-main__outer">
+        <div class="app-main__inner">
+            {{> AppMain/page-title }}
+
+            <div class="main-card mb-3 card">
+                <div class="card-header">
+                    Meals
+                    <div class="btn-actions-pane-right">
+                        <a href="meals-add.html" class="btn-shadow btn btn-primary">
+                            <i class="fa-solid fa-plus me-1"></i> Add New Meal
+                        </a>
+                    </div>
+                </div>
+                <div class="table-responsive">
+                    <table class="align-middle mb-0 table table-borderless table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Image</th>
+                                <th>Meal Name</th>
+                                <th>Category</th>
+                                <th>Price</th>
+                                <th>Availability</th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><img src="assets/images/avatars/11.jpg" width="48" height="48" class="rounded" alt="Mixed Grill"></td>
+                                <td><b>Mixed Grill</b></td>
+                                <td>Main Course</td>
+                                <td>520 EGP</td>
+                                <td><div class="badge bg-success">Available</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="meals-add.html" class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/images/avatars/12.jpg" width="48" height="48" class="rounded" alt="Grilled Chicken"></td>
+                                <td><b>Grilled Chicken</b></td>
+                                <td>Main Course</td>
+                                <td>210 EGP</td>
+                                <td><div class="badge bg-success">Available</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="meals-add.html" class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/images/avatars/8.jpg" width="48" height="48" class="rounded" alt="Beef Shawarma"></td>
+                                <td><b>Beef Shawarma</b></td>
+                                <td>Sandwiches</td>
+                                <td>120 EGP</td>
+                                <td><div class="badge bg-success">Available</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="meals-add.html" class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/images/avatars/9.jpg" width="48" height="48" class="rounded" alt="Seafood Pasta"></td>
+                                <td><b>Seafood Pasta</b></td>
+                                <td>Pasta</td>
+                                <td>210 EGP</td>
+                                <td><div class="badge bg-secondary">Unavailable</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="meals-add.html" class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td><img src="assets/images/avatars/10.jpg" width="48" height="48" class="rounded" alt="Koshari"></td>
+                                <td><b>Koshari</b></td>
+                                <td>Vegetarian</td>
+                                <td>60 EGP</td>
+                                <td><div class="badge bg-success">Available</div></td>
+                                <td class="text-center">
+                                    <a href="#" class="btn btn-sm btn-outline-secondary me-1"><i class="fa-solid fa-eye"></i></a>
+                                    <a href="meals-add.html" class="btn btn-sm btn-outline-primary me-1"><i class="fa-solid fa-pen"></i></a>
+                                    <a href="#" class="btn btn-sm btn-outline-danger"><i class="fa-solid fa-trash"></i></a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+{{/base}}

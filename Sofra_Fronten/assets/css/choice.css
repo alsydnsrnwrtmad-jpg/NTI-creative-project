@@ -1,0 +1,236 @@
+/* =====================================================================
+   SOFRA — Choice Page Styles
+   User/Admin Selection Page
+   ===================================================================== */
+
+.choice-section {
+    min-height: calc(100vh - 200px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background: radial-gradient(1200px 600px at 10% 10%, rgba(58,196,125,0.06), transparent 8%),
+                radial-gradient(900px 400px at 90% 90%, rgba(122,75,180,0.05), transparent 10%),
+                linear-gradient(135deg, var(--primary-gradient-start, #111217) 0%, var(--primary-gradient-end, #231426) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle decorative diagonal accent */
+.choice-section::before {
+    content: '';
+    position: absolute;
+    left: -10%;
+    top: -20%;
+    width: 120%;
+    height: 60%;
+    background: linear-gradient(90deg, rgba(255,255,255,0.02), rgba(255,255,255,0));
+    transform: rotate(-12deg);
+    pointer-events: none;
+}
+
+.choice-section::after {
+    content: '';
+    position: absolute;
+    right: -5%;
+    bottom: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.02), transparent 30%);
+    filter: blur(40px);
+    pointer-events: none;
+}
+
+.choice-header {
+    text-align: center;
+    margin-bottom: 50px;
+    color: white;
+}
+
+.choice-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.1));
+}
+
+.choice-header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.choice-header p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+.choice-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.choice-card {
+    background: rgba(255,255,255,0.06);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.35s cubic-bezier(.2,.9,.2,1);
+    box-shadow: 0 8px 30px rgba(2,6,23,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
+    border: 1px solid rgba(255,255,255,0.04);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Thin glowing rim */
+.choice-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    margin: -1px;
+    border-radius: 21px;
+    background: linear-gradient(90deg, rgba(102,126,234,0.08), rgba(245,148,183,0.06));
+    z-index: 0;
+    pointer-events: none;
+}
+
+.choice-card > * { position: relative; z-index: 1; }
+
+.choice-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.choice-icon {
+    width: 80px;
+    height: 80px;
+    margin: 0 auto 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.choice-icon svg {
+    width: 40px;
+    height: 40px;
+}
+
+.choice-card h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.choice-card p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+.btn-choice {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-user {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    
+}
+
+.btn-user:hover {
+    background: linear-gradient(135deg, #764ba2 0%, #667eea 100%);
+    transform: scale(1.05);
+}
+
+.btn-admin {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    color: white;
+}
+
+.btn-admin:hover {
+    background: linear-gradient(135deg, #f5576c 0%, #f093fb 100%);
+    transform: scale(1.05);
+}
+
+/* Dark mode support */
+[data-theme="dark"] .choice-card {
+    background: #2d2d2d;
+    color: white;
+}
+
+[data-theme="dark"] .choice-card h2 {
+    color: white;
+}
+
+[data-theme="dark"] .choice-card p {
+    color: #ccc;
+}
+
+/* Decorative heading gradient and subtle motion */
+.choice-header h1 {
+    background: linear-gradient(90deg, #9be15d, #00b09b, #7b61ff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    letter-spacing: 1px;
+}
+
+.choice-icon {
+    animation: float 6s ease-in-out infinite;
+    box-shadow: 0 15px 30px rgba(2,6,23,0.35);
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-6px) rotate(2deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+.btn-choice {
+    box-shadow: 0 8px 18px rgba(123,61,180,0.12);
+}
+
+.btn-choice:active {
+    transform: translateY(2px) scale(0.995);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .choice-header h1 {
+        font-size: 2rem;
+    }
+
+    .choice-header p {
+        font-size: 1rem;
+    }
+
+    .choice-cards {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .choice-card {
+        padding: 30px 20px;
+    }
+}

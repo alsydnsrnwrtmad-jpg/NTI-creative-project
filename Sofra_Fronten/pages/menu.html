@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra | Menu</title>
+
+    <script src="../assets/js/user-auth-guard.js" ></script>
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="../assets/css/placeholder.css">
+    <link rel="stylesheet" href="../assets/css/food-details.css">
+
+
+</head>
+
+<body data-page="menu" data-require-auth="true">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+
+    <div id="sofra-navbar"></div>
+
+    <main id="main-content" class="page-content">
+        <div class="container py-4">
+            <div class="text-center mb-5">
+                <span class="eyebrow" style="color: var(--brand-red-dark); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; font-size: 0.9rem;">🍽️ قائمة الطعام</span>
+                <h1 style="font-weight: 800; color: var(--text-primary); margin-top: 6px;" data-i18n="menuTitle">اختر طبقك المفضل</h1>
+                <p style="color: var(--text-secondary); max-width: 540px; margin: 0 auto; font-size: 0.98rem;" data-i18n="menuSub">أشهى الأطباق العالمية والمحلية طازجة من مطبخنا إليك مباشرة</p>
+            </div>
+
+            <div class="row g-4">
+
+                <!-- 1 -->
+                <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+                    <div class="menu-card" style="cursor: pointer;" onclick="window.location.href='food-details.html?id=1'">
+                        <div class="menu-image">
+                            <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?auto=format&fit=crop&w=800&q=80" alt="Margherita Pizza">
+                            <span class="menu-badge">Best Seller</span>
+                        </div>
+
+                        <div class="menu-card-body">
+                            <h3>Margherita Pizza</h3>
+                            <p>Classic Neapolitan pizza with fresh basil & mozzarella</p>
+
+                            <div class="menu-card-footer">
+                                <span class="price">EGP 149</span>
+                                <button class="add-btn" onclick="event.stopPropagation(); window.location.href='food-details.html?id=1'">
+                                    + Add
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+        <!-- 2 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Double Smash Burger">
+                    <span class="menu-badge hot">🔥 Hot</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Double Smash Burger</h3>
+                    <p>Two juicy patties, cheddar, pickles & secret sauce</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 189</span>
+                       <button class="add-btn" onclick="window.location.href='food-details.html?id=2'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=800&q=80" alt="Sushi">
+                    <span class="menu-badge">Chef's Pick</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Salmon Sushi Set</h3>
+                    <p>Fresh Atlantic salmon sushi with avocado and sesame</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 299</span>
+                    <button class="add-btn" onclick="window.location.href='food-details.html?id=3'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Mixed Grill">
+                    <span class="menu-badge">🔥 Popular</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Mixed Grill Platter</h3>
+                    <p>Kofta, chicken, tawook & lamb chops over charcoal</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 249</span>
+                     <button class="add-btn" onclick="window.location.href='food-details.html?id=4'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" alt="Pasta">
+                    <span class="menu-badge hot">🔥 Hot</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Truffle Fettuccine</h3>
+                    <p>Creamy pasta sauce with black truffle shavings</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 179</span>
+                     <button class="add-btn" onclick="window.location.href='food-details.html?id=5'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?auto=format&fit=crop&w=800&q=80" alt="Pepperoni Pizza">
+                    <span class="menu-badge">Best Seller</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Pepperoni Pizza</h3>
+                    <p>Crispy crust, mozzarella, pepperoni & tomato sauce</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 169</span>
+                    <button class="add-btn" onclick="window.location.href='food-details.html?id=6'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80" alt="Cheese Burger">
+                    <span class="menu-badge hot">🔥 Hot</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Classic Cheese Burger</h3>
+                    <p>Beef patty, melted cheddar, lettuce & special sauce</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 159</span>
+                 <button class="add-btn" onclick="window.location.href='food-details.html?id=7'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=800&q=80" alt="Salad">
+                    <span class="menu-badge">Healthy</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Fresh Garden Salad</h3>
+                    <p>Crispy vegetables, cherry tomatoes & homemade dressing</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 99</span>
+                      <button class="add-btn" onclick="window.location.href='food-details.html?id=8'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950?auto=format&fit=crop&w=800&q=80" alt="Dumplings">
+                    <span class="menu-badge">New</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Asian Dumplings</h3>
+                    <p>Steamed dumplings filled with chicken and vegetables</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 129</span>
+                      <button class="add-btn" onclick="window.location.href='food-details.html?id=9'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=800&q=80" alt="Healthy Bowl">
+                    <span class="menu-badge">Healthy</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Power Bowl</h3>
+                    <p>Fresh greens, avocado, chickpeas and grilled vegetables</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 139</span>
+              <button class="add-btn" onclick="window.location.href='food-details.html?id=10'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1551024506-0bccd828d307?auto=format&fit=crop&w=800&q=80" alt="Donuts">
+                    <span class="menu-badge hot">🍩 Sweet</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Chocolate Donuts</h3>
+                    <p>Soft donuts covered with rich chocolate glaze</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 89</span>
+                      <button class="add-btn" onclick="window.location.href='food-details.html?id=11'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=800&q=80" alt="Chocolate Cake">
+                    <span class="menu-badge">Dessert</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Chocolate Cake</h3>
+                    <p>Rich chocolate cake with creamy chocolate frosting</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 119</span>
+                       <button class="add-btn" onclick="window.location.href='food-details.html?id=12'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?auto=format&fit=crop&w=800&q=80" alt="Creamy Pasta">
+                    <span class="menu-badge hot">🔥 Hot</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Creamy Alfredo Pasta</h3>
+                    <p>Classic creamy Alfredo sauce with parmesan cheese</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 159</span>
+                      <button class="add-btn" onclick="window.location.href='food-details.html?id=13'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&fit=crop&w=800&q=80" alt="Chicken">
+                    <span class="menu-badge">Chef's Pick</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Grilled Chicken</h3>
+                    <p>Juicy grilled chicken breast with herbs and vegetables</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 199</span>
+                     <button class="add-btn" onclick="window.location.href='food-details.html?id=14'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=800&q=80" alt="Ramen">
+                    <span class="menu-badge">New</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Japanese Ramen</h3>
+                    <p>Rich broth, noodles, egg and tender sliced beef</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 219</span>
+                    <button class="add-btn" onclick="window.location.href='food-details.html?id=15'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=80" alt="Cake">
+                    <span class="menu-badge">Dessert</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Strawberry Cake</h3>
+                    <p>Soft vanilla cake with fresh strawberries and cream</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 129</span>
+                       <button class="add-btn" onclick="window.location.href='food-details.html?id=16'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 17 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1559339352-11d035aa65de?auto=format&fit=crop&w=800&q=80" alt="Seafood">
+                    <span class="menu-badge">Chef's Pick</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Seafood Platter</h3>
+                    <p>Fresh grilled shrimp, fish and calamari with lemon</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 349</span>
+                       <button class="add-btn" onclick="window.location.href='food-details.html?id=17'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 18 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" alt="Steak">
+                    <span class="menu-badge">Premium</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Premium Steak</h3>
+                    <p>Tender grilled steak served with roasted vegetables</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 399</span>
+                       <button class="add-btn" onclick="window.location.href='food-details.html?id=18'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 19 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=800&q=80" alt="Cheese Pizza">
+                    <span class="menu-badge hot">🔥 Hot</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Four Cheese Pizza</h3>
+                    <p>Mozzarella, cheddar, parmesan and blue cheese</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 179</span>
+                       <button class="add-btn" onclick="window.location.href='food-details.html?id=19'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 20 -->
+        <div class="col-12 col-sm-6 col-lg-4 col-xl-3">
+            <div class="menu-card">
+                <div class="menu-image">
+                    <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=800&q=80" alt="Chicken Bowl">
+                    <span class="menu-badge">Healthy</span>
+                </div>
+
+                <div class="menu-card-body">
+                    <h3>Chicken Avocado Bowl</h3>
+                    <p>Grilled chicken, avocado, rice and fresh vegetables</p>
+
+                    <div class="menu-card-footer">
+                        <span class="price">EGP 169</span>
+                       <button class="add-btn" onclick="window.location.href='food-details.html?id=20'">
+    + Add
+</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    </main>
+
+    <div id="sofra-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/auth-api.js"></script>
+    <script src="../assets/js/navbar-auth.js"></script>
+    <script src="../assets/js/menu-api.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofra | اختر نوع الحساب</title>
+
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+        crossorigin="anonymous">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="../assets/css/choice.css">
+</head>
+
+<body data-page="choice" data-require-auth="true">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+
+    <main id="main-content" class="page-content">
+        <section class="choice-section">
+            <div class="container">
+                <div class="choice-header">
+                    <img src="../assets/images/logo.png" alt="Sofra Logo" class="choice-logo">
+                    <h1>Welcome to Sofra</h1>
+                    <p>Select the account type to proceed</p>
+                </div>
+
+                <div class="choice-cards">
+                    <div class="choice-card user-card" onclick="goToLogin('user')">
+                        <div class="choice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path>
+                                <circle cx="12" cy="7" r="4"></circle>
+                            </svg>
+                        </div>
+                        <h2 style="color: rgba(255, 255, 255, 0.781) !important;">USER</h2>
+                        <p>Browse the menu,and track your orders</p>
+                        <button class="btn-choice btn-user" >USER</button>
+                    </div>
+
+                    <div class="choice-card admin-card" onclick="goToLogin('admin')">
+                        <div class="choice-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <h2 style="color: rgba(255, 255, 255, 0.781) !important;">ADMIN</h2>
+                        <p>Order, Menu, and Customer Management</p>
+                        <button class="btn-choice btn-admin">ADMIN</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/choice.js"></script>
+        <script src="../assets/js/auth-api.js"></script>
+
+</body>
+</html>

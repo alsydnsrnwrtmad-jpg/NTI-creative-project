@@ -1,0 +1,407 @@
+/* =====================================================================
+   SOFRA — LOGIN / REGISTER
+   ===================================================================== */
+
+.main_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 70px 30px 100px;
+}
+
+#main_container_login_register {
+    margin: 40px auto 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 1000px;
+    max-width: 100%;
+    height: 500px;
+    align-items: center;
+    background-color: var(--bg-surface);
+    border-radius: 16px;
+    box-shadow:
+        0 0px 10px var(--brand-red),
+        0 0px 20px var(--brand-yellow),
+        0 0px 30px var(--brand-red);
+    padding: 40px;
+    overflow: hidden;
+    transition: var(--transition-theme);
+}
+
+.register_container {
+    width: 350px;
+    max-width: 100%;
+    border-radius: 10px;
+    padding: 30px 30px;
+}
+
+.register_form {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.account-type-badge {
+    display: none;
+    align-items: center;
+    gap: 6px;
+    width: fit-content;
+    margin: -6px 0 10px;
+    padding: 4px 14px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: .3px;
+    text-transform: uppercase;
+}
+
+.account-type-badge.is-visible {
+    display: inline-flex;
+}
+
+.account-type-badge.type-user {
+    background: rgba(46, 160, 67, 0.12);
+    color: #2ea043;
+    border: 1px solid rgba(46, 160, 67, 0.35);
+}
+
+.account-type-badge.type-admin {
+    background: rgba(255, 140, 0, 0.12);
+    color: #d97706;
+    border: 1px solid rgba(217, 119, 6, 0.35);
+}
+
+.register_form h1 {
+    color: var(--text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 1.6rem;
+}
+
+.register_Names_section {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    width: 100%;
+}
+
+.checkboxContainer {
+    display: inline-block;
+    text-align: left;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+}
+
+.checkboxContainer label {
+    color: var(--text-secondary);
+}
+
+.login_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+    width: 380px;
+    max-width: 100%;
+}
+
+.login_form {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.login_form header h1 {
+    color: var(--text-primary);
+    font-size: 1.7rem;
+}
+
+/* inner login */
+#select_account_type {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#select_account_type label {
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+#radiooo {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    color: var(--text-secondary);
+    font-weight: 600;
+}
+
+.card_slide_login_register {
+    z-index: 3;
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: var(--gradient-card);
+    border-right: 5px inset rgba(0, 0, 0, 0.6);
+    transition: all 1s linear;
+    --opacity: 0;
+    border-radius: 16px;
+    padding:60px;
+}
+
+.card_slide_login_register::before {
+    content: "";
+    opacity: var(--opacity);
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(45deg, var(--brand-red), var(--brand-yellow));
+    transition: all 1s linear;
+}
+
+#img_login_register {
+    z-index: 4;
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    transition: all 1s linear;
+    box-shadow: 0px 0px 10px #fff,
+        0px 0px 15px #fff;
+    animation: righta 2s linear 1 forwards, rot 15s linear 2s infinite forwards;
+    background: var(--bg-surface);
+    padding: 10px;
+}
+
+.Button_style1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 44px;
+    margin: auto;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.2s ease;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+        0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+.Button_style1>p {
+    font-size: larger;
+    font-weight: bold;
+    color: #ffffff;
+    margin: 0;
+    z-index: 2;
+}
+
+#fifthButton {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    z-index: 0;
+    border: hidden;
+    transition: all 0.4s ease;
+}
+
+#fifthButton::after {
+    content: '';
+    position: absolute;
+    width: 500%;
+    height: 500%;
+    background: var(--gradient-btn);
+    z-index: 0;
+}
+
+#fifthButton::before {
+    content: '';
+    position: absolute;
+    inset: 2px;
+    border-radius: 15px;
+    z-index: 1;
+    background: #101010;
+}
+
+#fifthButton:hover {
+    letter-spacing: 2px;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.6),
+        0px 0px 25px rgba(0, 0, 0, 0.4);
+}
+
+#fifthButton:hover::after {
+    animation: rotate 2s linear infinite forwards;
+}
+
+.register_form input,
+.login_form input {
+    transition: all 0.3s ease;
+    font-size: medium;
+    background-color: var(--input-bg);
+    border-radius: 10px;
+    padding-left: 12px;
+    color: var(--text-primary);
+    outline: none;
+    border: 2px solid var(--input-border);
+}
+
+.register_form input::placeholder,
+.login_form input::placeholder {
+    color: var(--text-muted);
+}
+
+.register_form input:focus,
+.login_form input:focus {
+    transform: translateY(-3px);
+    border-color: var(--brand-gold);
+}
+
+.register_Names_section input[type=text] {
+    width: 48%;
+}
+
+input[type=text],
+input[type=email],
+input[type=password] {
+    height: 38px;
+    box-shadow: 0px 0px 5px rgba(255, 165, 0, 0.5);
+}
+
+input[type=text]:focus,
+input[type=email]:focus,
+input[type=password]:focus {
+    box-shadow:
+        0px 0px 10px orange,
+        0px 0px 15px orange;
+}
+
+input[type=checkbox] {
+    cursor: pointer;
+    margin-right: 8px;
+    accent-color: var(--brand-red);
+    width: 15px;
+    height: 15px;
+}
+
+.register_form a,
+.login_form a,
+.login_form footer a,
+.register_form footer a {
+    text-decoration: none;
+    color: var(--brand-red-dark);
+    font-weight: bold;
+}
+
+.login_form footer,
+.register_form footer {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    background: none;
+}
+
+h1>img,
+#burger_login {
+    width: 60px;
+    height: 68px;
+}
+
+/* logo move */
+@keyframes righta {
+    from {
+        left: -300px;
+        opacity: 0;
+    }
+
+    to {
+        left: 100px;
+        transform: rotate(360deg);
+        opacity: 1;
+    }
+}
+
+@keyframes rot {
+    0% {
+        transform: rotate(0deg);
+        box-shadow: 0px 0px 10px #fff, 0px 0px 15px #fff;
+    }
+
+    50% {
+        box-shadow: 0px 0px 30px #fff, 0px 0px 50px #fff;
+    }
+
+    100% {
+        transform: rotate(360deg);
+        box-shadow: 0px 0px 10px #fff, 0px 0px 15px #fff;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* ---------------- Responsive ---------------- */
+@media (max-width: 1040px) {
+    #main_container_login_register {
+        width: 100%;
+        flex-direction: column;
+        height: auto;
+        padding: 30px 20px;
+        gap: 30px;
+    }
+
+    .card_slide_login_register,
+    #img_login_register {
+        display: none;
+    }
+
+    .register_container,
+    .login_container {
+        width: 100%;
+    }
+
+    .register_form,
+    .login_form {
+        width: 100%;
+    }
+
+    /* على الموبايل بنبدّل بين الفورمين بدل ما نعرضهم مع بعض
+       (الافتراضي = تسجيل الدخول، زي الديسكتوب بالظبط) */
+    .register_container {
+        display: none;
+    }
+
+    #main_container_login_register.show-register .login_container {
+        display: none;
+    }
+
+    #main_container_login_register.show-register .register_container {
+        display: flex;
+    }
+}
+
+@media (max-width: 480px) {
+    .register_Names_section {
+        flex-direction: column;
+    }
+
+    .register_Names_section input[type=text] {
+        width: 100%;
+    }
+}

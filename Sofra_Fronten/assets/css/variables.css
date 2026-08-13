@@ -1,0 +1,154 @@
+/* =====================================================================
+   SOFRA — DESIGN TOKENS
+   نظام الألوان الموحّد لكل صفحات المشروع
+   ===================================================================== */
+
+:root {
+    /* ---------- Brand core (Burgundy & Gold — أنيق وهادي) ---------- */
+    --brand-red: #7A1F2B;
+    --brand-red-dark: #4E121B;
+    --brand-yellow: #D9B65D;
+    --brand-gold: #C9A24D;
+    --brand-cream: #fff8ec;
+
+    --gradient-header: linear-gradient(100deg, #4E121B, #7A1F2B);
+    --gradient-footer: linear-gradient(100deg, #3A0D14, #5A151F);
+    --gradient-card: linear-gradient(-135deg, #7A1F2B, #A83A46);
+    --gradient-btn: linear-gradient(135deg, #E0C06A 0%, #C9A24D 55%, #A67C32 100%);
+
+    --aura-glow: 0 0 20px rgba(201, 162, 77, 0.25);
+
+    /* ---------- Semantic tokens ---------- */
+    --bg-page: #fbf7f0;
+    --bg-surface: #ffffff;
+    --bg-surface-2: #f4efe4;
+    --bg-elevated: #ffffff;
+
+    --text-primary: #201a17;
+    --text-secondary: #5a504a;
+    --text-on-brand: #ffffff;
+    --text-muted: rgba(32, 26, 23, 0.6);
+
+    --border-soft: rgba(0, 0, 0, 0.1);
+    --shadow-soft: 0 10px 30px rgba(30, 15, 5, 0.10);
+    --shadow-glow-red: 0 0 10px var(--brand-red), 0 0 18px var(--brand-red);
+    --shadow-glow-gold: 0 0 10px var(--brand-gold), 0 0 18px var(--brand-gold);
+
+    --input-bg: rgba(180, 180, 180, 0.18);
+    --input-border: #d8d0c4;
+
+    --overlay-scrim: rgba(20, 12, 8, 0.55);
+
+    --transition-smooth: 0.25s ease;
+    --transition-theme: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+
+    color-scheme: light;
+}
+
+/* ---------- Sofra Aura Spectrum Color Themes ---------- */
+/* [data-accent="orange"] {
+    --brand-red: #ff5722;
+    --brand-red-dark: #e64a19;
+    --brand-yellow: #ffca28;
+    --brand-gold: #ffb300;
+    --gradient-header: linear-gradient(100deg, #ffca28, #ff5722);
+    --gradient-footer: linear-gradient(100deg, #ff5722, #ffca28);
+    --gradient-card: linear-gradient(-135deg, #ff5722, #ffca28);
+    --gradient-btn: linear-gradient(135deg, #ffca28 0%, #ff9800 45%, #ff5722 100%);
+    --aura-glow: 0 0 20px rgba(255, 87, 34, 0.4);
+}
+
+[data-accent="red"] {
+    --brand-red: #ff1744;
+    --brand-red-dark: #d50000;
+    --brand-yellow: #ff616f;
+    --brand-gold: #ff2a4b;
+    --gradient-header: linear-gradient(100deg, #ff616f, #ff1744);
+    --gradient-footer: linear-gradient(100deg, #ff1744, #ff616f);
+    --gradient-card: linear-gradient(-135deg, #ff1744, #ff616f);
+    --gradient-btn: linear-gradient(135deg, #ff616f 0%, #ff1744 60%, #d50000 100%);
+    --aura-glow: 0 0 20px rgba(255, 23, 68, 0.4);
+} */
+/* 
+[data-accent="green"] {
+    --brand-red: #00e676;
+    --brand-red-dark: #00b0ff;
+    --brand-yellow: #b9f6ca;
+    --brand-gold: #00e676;
+    --gradient-header: linear-gradient(100deg, #00e676, #00b0ff);
+    --gradient-footer: linear-gradient(100deg, #00b0ff, #00e676);
+    --gradient-card: linear-gradient(-135deg, #00e676, #00b0ff);
+    --gradient-btn: linear-gradient(135deg, #b9f6ca 0%, #00e676 60%, #1b5e20 100%);
+    --aura-glow: 0 0 20px rgba(0, 230, 118, 0.4);
+}
+
+[data-accent="purple"] {
+    --brand-red: #7c4dff;
+    --brand-red-dark: #651fff;
+    --brand-yellow: #b388ff;
+    --brand-gold: #7c4dff;
+    --gradient-header: linear-gradient(100deg, #b388ff, #7c4dff);
+    --gradient-footer: linear-gradient(100deg, #7c4dff, #b388ff);
+    --gradient-card: linear-gradient(-135deg, #7c4dff, #b388ff);
+    --gradient-btn: linear-gradient(135deg, #d1c4e9 0%, #7c4dff 60%, #651fff 100%);
+    --aura-glow: 0 0 20px rgba(124, 77, 255, 0.4);
+} */
+
+/* [data-accent="gold"] {
+    --brand-red: #ffab00;
+    --brand-red-dark: #ff6d00;
+    --brand-yellow: #ffd54f;
+    --brand-gold: #ffc400;
+    --gradient-header: linear-gradient(100deg, #ffd54f, #ffab00);
+    --gradient-footer: linear-gradient(100deg, #ffab00, #ffd54f);
+    --gradient-card: linear-gradient(-135deg, #ffab00, #ffd54f);
+    --gradient-btn: linear-gradient(135deg, #ffe082 0%, #ffc400 60%, #ff6d00 100%);
+    --aura-glow: 0 0 20px rgba(255, 171, 0, 0.4);
+} */
+
+/* ---------- الوضع الليلي (Dark) ---------- */
+[data-theme="dark"] {
+    --bg-page: #14100e;
+    --bg-surface: #1d1815;
+    --bg-surface-2: #262019;
+    --bg-elevated: #241d19;
+
+    --text-primary: #f6efe6;
+    --text-secondary: #cdbfae;
+    --text-on-brand: #ffffff;
+    --text-muted: rgba(246, 239, 230, 0.62);
+
+    --border-soft: rgba(255, 255, 255, 0.10);
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+    --input-bg: rgba(255, 255, 255, 0.06);
+    --input-border: #3a322b;
+
+    --overlay-scrim: rgba(0, 0, 0, 0.7);
+
+    color-scheme: dark;
+}
+
+@media (prefers-color-scheme: dark) {
+    [data-theme="auto"] {
+        --bg-page: #14100e;
+        --bg-surface: #1d1815;
+        --bg-surface-2: #262019;
+        --bg-elevated: #241d19;
+
+        --text-primary: #f6efe6;
+        --text-secondary: #cdbfae;
+        --text-on-brand: #ffffff;
+        --text-muted: rgba(246, 239, 230, 0.62);
+
+        --border-soft: rgba(255, 255, 255, 0.10);
+        --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
+
+        --input-bg: rgba(255, 255, 255, 0.06);
+        --input-border: #3a322b;
+
+        --overlay-scrim: rgba(0, 0, 0, 0.7);
+
+        color-scheme: dark;
+    }
+}

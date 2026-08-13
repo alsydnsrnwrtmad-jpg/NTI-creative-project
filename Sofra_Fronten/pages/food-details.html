@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Details - Sofra</title>
+
+    <script src="../assets/js/theme-init.js"></script>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <link rel="icon" href="../assets/images/logo.png">
+
+    <link rel="stylesheet" href="../assets/css/variables.css">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/footer.css">
+    <link rel="stylesheet" href="../assets/css/theme-toggle.css">
+    <link rel="stylesheet" href="../assets/css/placeholder.css">
+    <link rel="stylesheet" href="../assets/css/food-details.css">
+            <script src="../assets/js/user-auth-guard.js"></script>
+
+</head>
+
+<body data-page="menu" data-require-auth="true">
+    <a href="#main-content" class="skip-link">تخطي إلى المحتوى</a>
+
+    <div id="sofra-navbar"></div>
+
+    <main id="main-content" class="page-content">
+        <section class="fd-section">
+            <div class="container">
+
+                <nav class="fd-breadcrumb" aria-label="breadcrumb">
+                    <a href="index.html">الرئيسية</a>
+                    <span>/</span>
+                    <a href="menu.html">المنيو</a>
+                    <span>/</span>
+                    <span id="fdBreadcrumbName">تفاصيل الطبق</span>
+                </nav>
+
+                <div class="fd-wrapper" id="fdWrapper">
+
+                    <div class="fd-gallery">
+                        <span id="foodBadge" class="menu-badge"></span>
+                        <img id="foodImage" src="" alt="">
+                    </div>
+
+                    <div class="fd-info">
+                        <h1 id="foodName"></h1>
+                        <p id="foodDescription" class="fd-desc"></p>
+
+                        <div class="fd-price" id="foodPrice"></div>
+
+                        <div class="fd-ingredients">
+                            <h3>المكونات</h3>
+                            <ul id="foodIngredients"></ul>
+                        </div>
+
+                        <div class="fd-actions">
+                            <div class="fd-qty" role="group" aria-label="الكمية">
+                                <button type="button" id="fdQtyMinus" aria-label="تقليل الكمية">−</button>
+                                <span id="fdQtyValue">1</span>
+                                <button type="button" id="fdQtyPlus" aria-label="زيادة الكمية">+</button>
+                            </div>
+
+                            <button class="add-btn fd-add-btn" id="addToCart">+ أضف إلى السلة</button>
+
+                            <button type="button" class="fd-fav-btn" id="favBtn" aria-label="إضافة للمفضلة">
+                                <span class="heart-icon">🤍</span>
+                                <span class="fav-text">إضافة للمفضلة</span>
+                            </button>
+
+                            <a href="cart.html" class="fd-cart-link">عرض السلة 🛒</a>
+                        </div>
+
+                        <p class="fd-toast" id="fdToast" role="status" aria-live="polite"></p>
+                    </div>
+
+                </div>
+
+                <!-- قسم الأكلات القريبة والمشابهة -->
+                <div class="fd-related-container" id="fdRelatedSection">
+                    <div class="fd-related-header">
+                        <h2>🔥 أكلات قريبة وشبيهة قد تعجبك</h2>
+                        <p>استكشف المزيد من الأطباق اللذيذة بنفس الجودة والنكهة الممتازة</p>
+                    </div>
+                    <div class="row g-4" id="fdRelatedGrid"></div>
+                </div>
+
+                <div class="placeholder-card fd-not-found" id="fdNotFound" hidden>
+                    <img src="../assets/images/logo.png" alt="">
+                    <span class="eyebrow">عذرًا</span>
+                    <h1>الطبق مش موجود</h1>
+                    <p>يمكن الرابط غلط أو الطبق اتشال من المنيو. جرّب ترجع للمنيو وتختار طبقك من هناك.</p>
+                    <a href="menu.html">الرجوع للمنيو</a>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <div id="sofra-footer"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../assets/js/include.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/auth-api.js"></script>
+    <script src="../assets/js/navbar-auth.js"></script>
+    <script src="../assets/js/food-details.js"></script>
+</body>
+
+</html>

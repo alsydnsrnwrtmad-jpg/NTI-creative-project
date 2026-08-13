@@ -1,0 +1,60 @@
+/* =====================================================================
+   SOFRA — PLACEHOLDER PAGE
+   لصفحات لسه مصمّمة (هتتستبدل لما التصميم النهائي يوصل)
+   ===================================================================== */
+
+.placeholder-page {
+    min-height: calc(100vh - 96px - 320px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 24px;
+}
+
+.placeholder-card {
+    max-width: 560px;
+    text-align: center;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-soft);
+    border-radius: 24px;
+    padding: 56px 40px;
+    box-shadow: var(--shadow-soft);
+}
+
+.placeholder-card img {
+    width: 140px;
+    margin: 0 auto 24px;
+}
+
+.placeholder-card .eyebrow {
+    display: inline-block;
+    background: var(--bg-surface-2);
+    color: var(--brand-red-dark);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 16px;
+    border-radius: 999px;
+    margin-bottom: 16px;
+}
+
+.placeholder-card h1 {
+    font-size: 1.9rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    margin: 0 0 12px;
+}
+
+.placeholder-card p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 26px;
+}
+
+.placeholder-card a {
+    display: inline-flex;
+    padding: 12px 28px;
+    border-radius: 999px;
+    background: var(--gradient-card);
+    color: #fff;
+    font-weight: 700;
+}
